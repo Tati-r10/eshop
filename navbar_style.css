@@ -1,0 +1,151 @@
+
+/*------------------------------ Style for the whole page ------------------------------*/
+
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	list-style: none;
+}
+
+body{
+	background-image: linear-gradient(to bottom,#f2e6ff,#ffffe6, #c3c388);
+	background-attachment: fixed;
+	font-family: Times New Roman;
+	color: white;
+}
+
+
+/*------------------------------ General style for the header ------------------------------*/
+
+header{
+	width: 100%;
+	height: 80px;
+	background-color: #5D4954;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 80px;
+}
+
+
+/*----------------------------------- Style for the logo -----------------------------------*/
+
+.logo{
+	color: rgb(226,226,226);
+	font-size: 25px;
+	font-weight: bold;
+}
+
+
+/*---------------------------------- Style for the navbar ----------------------------------*/
+
+.navbar {
+	display: flex;
+}
+
+.navbar ul {
+	display: flex;
+	margin-left: 100px;
+}
+
+.navbar ul li a{
+	display: block;
+	color: rgb(226,226,226);
+	font-size: 18px;
+	padding: 10px;
+	border-radius: 50px;
+	transition: 0.8s;
+	margin: 0px 5px;
+	text-decoration: none;
+	width: 100px;
+	text-align: center;
+}
+
+.navbar ul li a:hover{
+	color:  #5D4954;
+	background-color: rgb(226,226,226);
+	text-decoration-line: underline;
+}
+
+#imgCart{
+	height: 20px;
+	width : 20px;
+}
+
+#cart:hover #imgCart{
+	filter: invert(28%) sepia(11%) saturate(787%) hue-rotate(274deg) brightness(60%) contrast(86%);
+	
+}
+
+.navbar ul li a.active{
+	color:  #5D4954;
+	background-color: rgb(226,226,226);
+}
+
+.menuIcon div{
+	width: 25px;
+	height: 3px;
+	background-color: rgb(226,226,226);
+	margin: 5px;
+	border-radius: 25px;
+}
+
+.menuIcon{
+	display: none; /*The menu icon must be invisible when the screen is wide enough*/
+}
+
+
+/*---------------------------- Style setting about screen's width ----------------------------*/
+
+@media only screen and (max-width: 1320px){
+	header{
+		padding: 0px 45px;
+	}
+}
+
+@media only screen and (max-width: 1100px){
+	header{
+		padding: 0px 30px;
+	}
+
+	.navbar ul{
+		margin: 0px;
+	}
+}
+
+@media only screen and (max-width: 850px){
+	.menuIcon{
+		display: block;
+		cursor: pointer;
+	}
+	
+	.navbar{
+		display:block;
+		position: absolute;
+		height: 0px;
+		top: 80px;
+		left: 0px;
+		right: 0px;
+		width: 100vw;
+		background-color: #5D4954;
+		transition: 0.5s;
+		overflow: hidden;
+	}
+	
+	.navbar.active{
+		height: 500px;
+	}
+
+	.navbar ul{
+		display: block;
+		width: fit-content;
+		margin: 80px auto 0 auto;
+		transition: 0.5s;
+		opacity: 0;
+	}
+	
+	.navbar.active ul{
+		opacity: 1;
+	}
+}
