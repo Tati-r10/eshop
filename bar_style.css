@@ -1,0 +1,76 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body{
+	background-image: linear-gradient(to bottom,#f2e6ff,#ffffe6, #c3c388);
+	background-attachment: fixed;
+	font-family: Times New Roman;
+	color: white;
+}
+
+/*Style for the menu bar*/
+.navbar{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 80px;
+	background-color: #5D4954;
+}
+
+/*Style for the logo in the menu bar*/
+label.logo{
+	color: rgb(226,226,226);
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-size: 25px;
+}
+
+.navbar ul{
+	display: flex;
+	height: 25px;
+	justify-content: space-around;
+	list-style: none;
+}
+
+.navbar ul a{
+	color: rgb(226,226,226);
+	text-decoration: none;
+	font-size: 18px;
+	margin: 10px;
+}
+
+.menuIcon div{
+	width: 25px;
+	height: 3px;
+	background-color: rgb(226,226,226);
+	margin: 5px;
+	border-radius: 25px;
+}
+
+.menuIcon{
+	display: none;
+	
+}
+
+#shoppingCart{
+	height: 20px;
+}
+
+@media screen and (max-width: 1024px){
+	
+}
+
+@media screen and (max-width: 768px){
+	
+	.navbar{
+		position: absolute;
+		right: 0px;
+		height: 80px;
+		
+		
+	}
+	
+}
